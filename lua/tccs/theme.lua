@@ -29,7 +29,7 @@ theme.set_highlights = function(opts)
   hl(0, 'NonText', { fg = c.guide_normal })
 
   hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 17 })
-  hl(0, 'PmenuSel', { fg = c.selction_bg, bg = c.fg, ctermfg = 188, ctermbg = 23 })
+  hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 188, ctermbg = 23 })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
