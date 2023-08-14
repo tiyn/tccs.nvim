@@ -6,7 +6,7 @@ colors.get_colors = function()
     -- common
     accent             = "#C586C0",
     bg                 = "#191919",
-    bg_alt             = "#121212",
+    -- bg_alt             = "#121212",
     fg                 = "#D4D4D4",
     ui                 = "#4D5566",
     -- syntax
@@ -31,11 +31,11 @@ colors.get_colors = function()
     panel_bg           = "#0D1016",
     panel_shadow       = "#00010A",
     panel_border       = "#000000",
-    gutter_normal      = "#323945",
-    gutter_active      = "#464D5E",
+    -- gutter_normal      = "#323945",
+    -- gutter_active      = "#464D5E",
     selection_bg       = "#273747",
     selection_inactive = "#272727",
-    selection_border   = "#304357",
+    -- selection_border   = "#304357",
     guide_active       = "#393F4D",
     guide_normal       = "#242A35",
     -- vcs

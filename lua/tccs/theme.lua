@@ -92,10 +92,10 @@ theme.set_highlights = function(opts)
   hl(0, 'netrwClassify', { fg = c.special })
 
   -- gitgutter
-  hl(0, 'GitGutterAdd', { fg = c.vcs_added, bg = c.panel_bg })
-  hl(0, 'GitGutterChange', { fg = c.vcs_modified, bg = c.panel_bg })
-  hl(0, 'GitGutterDelete', { fg = c.vcs_removed, bg = c.panel_bg })
-  hl(0, 'GitGutterChangeDelete', { fg = c.vcs_modified, bg = c.panel_bg, underline = true })
+  hl(0, 'GitGutterAdd', { fg = c.vcs_added, bg = c.bg })
+  hl(0, 'GitGutterChange', { fg = c.vcs_modified, bg = c.bg })
+  hl(0, 'GitGutterDelete', { fg = c.vcs_removed, bg = c.bg })
+  hl(0, 'GitGutterChangeDelete', { fg = c.vcs_modified, bg = c.bg, underline = true })
 
   -- signify
   hl(0, 'SignifySignAdd', { fg = c.vcs_added, bg = c.panel_bg })
