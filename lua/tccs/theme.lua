@@ -28,8 +28,8 @@ theme.set_highlights = function(opts)
   hl(0, 'MoreMsg', { fg = c.string })
   hl(0, 'NonText', { fg = c.guide_normal })
 
-  hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 17 })
-  hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 188, ctermbg = 23 })
+  hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 16 })
+  hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 16, ctermbg = 188 })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
