@@ -5,7 +5,7 @@ local c = require('tccs.colors').get_colors()
 
 local line_c = {
   fg_prim  = c.fg,
-  bg_prim  = c.bg_alt,
+  bg_prim  = c.panel_bg,
   fg_sec   = c.fg,
   bg_sec   = c.panel_shadow,
   visual   = c.operator,

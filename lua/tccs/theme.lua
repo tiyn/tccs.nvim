@@ -17,7 +17,7 @@ theme.set_highlights = function(opts)
 
   hl(0, 'ErrorMsg', { fg = c.fg, bg = c.error, standout = true })
 
-  hl(0, 'VertSplit', { fg = c.panel_bg, bg = c.panel_bg })
+  hl(0, 'VertSplit', { fg = c.bg, bg = c.bg })
 
   hl(0, 'Folded', { fg = c.fg_idle, bg = c.bg })
   hl(0, 'FoldColumn', { bg = c.bg })
