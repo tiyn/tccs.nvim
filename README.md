@@ -27,7 +27,7 @@ Other plugin managers can be used too - the setup has to be adapted accordingly 
 
 Add the following line into the function `return require("lazy").setup({})` to load the plugin.
 
-```vim
+```lua
 {
   'tiyn/tccs.nvim',
   config = function()
@@ -56,7 +56,7 @@ For LuaLine support add the following lines in in the same way of the previous c
 
 ### Options
 
-```vim
+```lua
 -- Enable transparent background
 transparent = true,
 
