@@ -19,9 +19,9 @@ theme.set_highlights = function(opts)
 
   hl(0, 'VertSplit', { fg = c.panel_bg, bg = c.panel_bg })
 
-  hl(0, 'Folded', { fg = c.fg_idle, bg = c.panel_bg })
-  hl(0, 'FoldColumn', { bg = c.panel_bg })
-  hl(0, 'SignColumn', { bg = c.panel_bg })
+  hl(0, 'Folded', { fg = c.fg_idle, bg = c.bg })
+  hl(0, 'FoldColumn', { bg = c.bg })
+  hl(0, 'SignColumn', { bg = c.bg })
 
   hl(0, 'MatchParen', { fg = c.fg, bg = c.bg, underline = true })
   hl(0, 'ModeMsg', { fg = c.string })
@@ -98,10 +98,10 @@ theme.set_highlights = function(opts)
   hl(0, 'GitGutterChangeDelete', { fg = c.vcs_modified, bg = c.bg, underline = true })
 
   -- signify
-  hl(0, 'SignifySignAdd', { fg = c.vcs_added, bg = c.panel_bg })
-  hl(0, 'SignifySignChange', { fg = c.vcs_modified, bg = c.panel_bg })
-  hl(0, 'SignifySignDelete', { fg = c.vcs_removed, bg = c.panel_bg })
-  hl(0, 'SignifySignChangeDelete', { fg = c.vcs_modified, bg = c.panel_bg, underline = true })
+  hl(0, 'SignifySignAdd', { fg = c.vcs_added, bg = c.bg })
+  hl(0, 'SignifySignChange', { fg = c.vcs_modified, bg = c.bg })
+  hl(0, 'SignifySignDelete', { fg = c.vcs_removed, bg = c.bg })
+  hl(0, 'SignifySignChangeDelete', { fg = c.vcs_modified, bg = c.bg, underline = true })
 
   -- nerdtree
   hl(0, 'NERDTreeOpenable', { fg = c.fg_idle })
