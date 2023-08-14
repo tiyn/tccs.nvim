@@ -1,72 +1,46 @@
 -- Copyright (c) 2020-2021 Mofiqul Islam
 -- MIT license, see LICENSE for more details.
 local config = require('tccs.config')
-local tccs = {}
-local colors = {}
+local c = require('tccs.colors').get_colors()
 
-if vim.o.background == 'dark' then
-    colors.inactive = '#666666'
-    colors.bg = '#262626'
-    colors.bg2 = '#373737'
-    colors.fg = '#ffffff'
-    colors.red = '#f44747'
-    colors.green = '#4EC9B0'
-    colors.blue = '#0a7aca'
-    colors.lightblue = '#5CB6F8'
-    colors.yellow = '#ffaf00'
-    colors.pink = '#DDB6F2'
-else
-    colors.inactive = '#888888'
-    colors.bg = '#F5F5F5'
-    colors.bg2 = '#E4E4E4'
-    colors.fg = '#343434'
-    colors.red = '#FF0000'
-    colors.green = '#008000'
-    colors.blue = '#AF00DB'
-    colors.lightblue = '#0451A5'
-    colors.yellow = '#ffaf00'
-    colors.pink = '#FFA3A3'
-end
-
-tccs.normal = {
-    a = { fg = vim.o.background == 'dark' and colors.fg or colors.bg, bg = colors.blue, gui = 'bold' },
-    b = { fg = colors.blue, bg = config.opts.transparent and 'NONE' or colors.bg2 },
-    c = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg },
+local line_c = {
+  fg_prim = c.fg,
+  bg_prim = c.bg_alt,
+  fg_sec  = c.fg,
+  bg_sec  = c.panel_shadow,
+  visual   = c.operator,
+  insert   = c.comment,
+  normal   = c.entity,
+  replace  = c.vcs_removed,
+  contrast = c.string,
 }
 
-tccs.visual = {
-    a = { fg = colors.bg, bg = colors.yellow, gui = 'bold' },
-    b = { fg = colors.yellow, bg = config.opts.transparent and 'NONE' or colors.bg },
+return {
+  normal = {
+    a = { fg = line_c.bg_prim, bg = line_c.insert, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+    c = { fg = line_c.fg_sec, bg = config.opts.transparent and 'NONE' or line_c.bg_prim },
+  },
+  insert = {
+    a = { fg = line_c.bg_prim, bg = line_c.normal, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+  },
+  visual = {
+    a = { fg = line_c.bg_prim, bg = line_c.visual, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+  },
+  replace = {
+    a = { fg = line_c.bg_prim, bg = line_c.replace, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+  },
+  command = {
+    a = { fg = line_c.bg_prim, bg = line_c.contrast, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+    c = { fg = line_c.fg_sec, bg = config.opts.transparent and 'NONE' or line_c.bg_prim },
+  },
+  inactive = {
+    a = { fg = line_c.fg_prim, bg = line_c.bg_sec, gui = 'bold' },
+    b = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_sec },
+    c = { fg = line_c.fg_prim, bg = config.opts.transparent and 'NONE' or line_c.bg_prim },
+  },
 }
-
-tccs.inactive = {
-    a = { fg = colors.fg, bg = colors.bg, gui = 'bold' },
-    b = { fg = colors.inactive, bg = config.opts.transparent and 'NONE' or colors.bg },
-    c = { fg = colors.inactive, bg = config.opts.transparent and 'NONE' or colors.bg },
-}
-
-tccs.replace = {
-    a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.red, gui = 'bold' },
-    b = { fg = colors.red, bg = config.opts.transparent and 'NONE' or colors.bg2 },
-    c = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg },
-}
-
-tccs.insert = {
-    a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.green, gui = 'bold' },
-    b = { fg = colors.green, bg = config.opts.transparent and 'NONE' or colors.bg2 },
-    c = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg },
-}
-
-tccs.terminal = {
-    a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.green, gui = 'bold' },
-    b = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg2 },
-    c = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg },
-}
-
-tccs.command = {
-    a = { fg = vim.o.background == 'dark' and colors.bg or colors.fg, bg = colors.pink, gui = 'bold' },
-    b = { fg = colors.pink, bg = config.opts.transparent and 'NONE' or colors.bg2 },
-    c = { fg = colors.fg, bg = config.opts.transparent and 'NONE' or colors.bg },
-}
-
-return tccs
