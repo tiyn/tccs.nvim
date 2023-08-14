@@ -17,7 +17,7 @@ theme.set_highlights = function(opts)
 
   hl(0, 'ErrorMsg', { fg = c.fg, bg = c.error, standout = true })
 
-  hl(0, 'VertSplit', { fg = c.bg, bg = c.bg })
+  hl(0, 'VertSplit', { fg = c.panel_bg, bg = c.panel_bg })
 
   hl(0, 'Folded', { fg = c.fg_idle, bg = c.bg })
   hl(0, 'FoldColumn', { bg = c.bg })
@@ -30,8 +30,6 @@ theme.set_highlights = function(opts)
 
   hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 235 })
   hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 235, ctermbg = 188 })
-  hl(0, 'PmenuSbar', { bg = c.selection_inactive })
-  hl(0, 'PmenuThumb', { bg = c.selection_inactive })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
@@ -273,7 +271,7 @@ theme.set_highlights = function(opts)
   hl(0, 'NvimTreeSpecialFile', { fg = c.keyword, underline = true })
   hl(0, 'NvimTreeNormal', { fg = c.fg })
   hl(0, 'NvimTreeCursorLine', {})
-  hl(0, 'NvimTreeVertSplit', { bg = c.bg })
+  hl(0, 'NvimTreeVertSplit', { bg = c.panel_shadow })
   hl(0, 'NvimTreeEndOfBuffer', {})
   hl(0, 'NvimTreeOpenedFolderName', {})
   hl(0, 'NvimTreeGitRenamed', { fg = c.vcs_modified })
@@ -290,6 +288,8 @@ return theme
 
 --hl(0, 'EndOfBuffer', { fg = c.bg, bg = 'NONE' })
 --hl(0, 'IncSearch', { fg = c.vscNone, bg = c.vscSearchCurrent })
+--hl(0, 'PmenuSbar', { fg = 'NONE', bg = c.vscPopupHighlightGray })
+--hl(0, 'PmenuThumb', { fg = 'NONE', bg = c.vscPopupFront })
 --hl(0, 'VisualNOS', { bg = c.vscSelection })
 --hl(0, 'Character', { fg = c.vscOrange, bg = 'NONE' })
 --hl(0, 'Number', { fg = c.vscLightGreen, bg = 'NONE' })
