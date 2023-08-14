@@ -28,13 +28,12 @@ theme.set_highlights = function(opts)
   hl(0, 'MoreMsg', { fg = c.string })
   hl(0, 'NonText', { fg = c.guide_normal })
 
-  -- TODO: fix pmenu colors
-  hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive })
-  hl(0, 'PmenuSel', { fg = c.fg, bg = c.selection_inactive, reverse = true })
+  hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 17 })
+  hl(0, 'PmenuSel', { fg = c.fg, bg = c.selection_bg, ctermfg = 188, ctermbg = 23, reverse = true })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
-  hl(0, 'Search', { fg = c.bg, bg = c.constant })   -- TODO: fix color
+  hl(0, 'Search', { fg = c.bg, bg = c.constant }) -- TODO: fix color
   hl(0, 'SpecialKey', { fg = c.selection_inactive })
 
   hl(0, 'SpellCap', { fg = c.tag, undercurl = true, sp = c.error })
@@ -45,7 +44,7 @@ theme.set_highlights = function(opts)
   hl(0, 'StatusLine', { fg = c.fg, bg = c.panel_bg })
   hl(0, 'StatusLineNC', { fg = c.fg_idle, bg = c.panel_bg })
 
-  hl(0, 'WildMenu', { fg = c.fg, bg = c.markup })   -- TODO: fix color
+  hl(0, 'WildMenu', { fg = c.fg, bg = c.markup }) -- TODO: fix color
 
   hl(0, 'TabLine', { fg = c.comment, bg = c.panel_shadow })
   hl(0, 'TabLineFill', { fg = c.fg, bg = c.panel_border })
