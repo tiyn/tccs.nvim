@@ -30,8 +30,6 @@ theme.set_highlights = function(opts)
 
   hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 235 })
   hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 235, ctermbg = 188 })
-  hl(0, 'PmenuSbar', { bg = c.selection_inactive })
-  hl(0, 'PmenuThumb', { bg = c.selection_inactive })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
@@ -290,6 +288,8 @@ return theme
 
 --hl(0, 'EndOfBuffer', { fg = c.bg, bg = 'NONE' })
 --hl(0, 'IncSearch', { fg = c.vscNone, bg = c.vscSearchCurrent })
+--hl(0, 'PmenuSbar', { fg = 'NONE', bg = c.vscPopupHighlightGray })
+--hl(0, 'PmenuThumb', { fg = 'NONE', bg = c.vscPopupFront })
 --hl(0, 'VisualNOS', { bg = c.vscSelection })
 --hl(0, 'Character', { fg = c.vscOrange, bg = 'NONE' })
 --hl(0, 'Number', { fg = c.vscLightGreen, bg = 'NONE' })
