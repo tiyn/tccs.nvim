@@ -33,7 +33,7 @@ colors.get_colors = function()
     -- git
     added_fg      = "#6A9955",
     added_bg      = "#0E1F17",
-    modified_fg   = "#18A2FE",
+    modified_fg   = "#004080",
     modified_bg   = "#223255",
     removed_fg    = "#D16969",
     removed_bg    = "#190E11",
