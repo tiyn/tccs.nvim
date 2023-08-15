@@ -53,7 +53,7 @@ theme.set_highlights = function(opts)
   hl(0, 'Visual', { bg = c.popup })
 
   -- syntax
-  hl(0, 'Title', { fg = c.keyword, bold = true })
+  hl(0, 'Title', { fg = c.bold, bold = true })
   hl(0, 'Comment', { fg = c.comment, italic = opts.italic_comments })
   hl(0, 'Constant', { fg = c.constant })
   hl(0, 'String', { fg = c.string })
