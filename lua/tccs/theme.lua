@@ -7,10 +7,10 @@ theme.set_highlights = function(opts)
   hl(0, 'Normal', { fg = c.fg, bg = c.bg })
   hl(0, 'ColorColumn', { bg = c.line_alt })
   hl(0, 'Cursor', { fg = c.tag })
-  hl(0, 'CursorLine', { bg = c.line })
-  hl(0, 'CursorColumn', { bg = c.line })
+  hl(0, 'CursorLine', { bg = c.panel_bg })
+  hl(0, 'CursorColumn', { bg = c.panel_bg })
 
-  hl(0, 'CursorLineNr', { fg = c.accent, bg = c.line })
+  hl(0, 'CursorLineNr', { fg = c.accent, bg = c.panel_bg })
   hl(0, 'LineNr', { fg = c.guide_normal })
 
   hl(0, 'Directory', { fg = c.func })
@@ -78,7 +78,7 @@ theme.set_highlights = function(opts)
   -- quickfix window highlighting
   hl(0, 'qfLineNr', { fg = c.keyword })
   hl(0, 'Conceal', { fg = c.comment })
-  hl(0, 'CursorLineConceal', { fg = c.guide_normal, bg = c.line })
+  hl(0, 'CursorLineConceal', { fg = c.guide_normal, bg = c.panel_bg })
 
   -- diff syntax highlighting
   hl(0, 'DiffAdd', { fg = c.vcs_added, bg = c.guide_normal })

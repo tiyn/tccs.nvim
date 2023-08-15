@@ -26,7 +26,7 @@ colors.get_colors = function()
     fg_idle            = "#FFFF00",
     warning            = "#FFFF00",
     -- ui
-    line               = "#00010A",
+    -- line               = "#00010A",
     line_alt           = "#772222",
     panel_bg           = "#0D1016",
     panel_shadow       = "#00010A",
