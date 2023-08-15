@@ -5,19 +5,19 @@ theme.set_highlights = function(opts)
   local c = require('tccs.colors').get_colors()
 
   hl(0, 'Normal', { fg = c.fg, bg = c.bg })
-  hl(0, 'ColorColumn', { bg = c.line_alt })
+  hl(0, 'ColorColumn', { bg = c.color_column })
   hl(0, 'Cursor', { fg = c.tag })
-  hl(0, 'CursorLine', { bg = c.panel_bg })
-  hl(0, 'CursorColumn', { bg = c.panel_bg })
+  hl(0, 'CursorLine', { bg = c.bg_alt })
+  hl(0, 'CursorColumn', { bg = c.bg_alt })
 
-  hl(0, 'CursorLineNr', { fg = c.accent, bg = c.panel_bg })
+  hl(0, 'CursorLineNr', { fg = c.accent, bg = c.bg_alt })
   hl(0, 'LineNr', { fg = c.guide_normal })
 
   hl(0, 'Directory', { fg = c.func })
 
   hl(0, 'ErrorMsg', { fg = c.fg, bg = c.error, standout = true })
 
-  hl(0, 'VertSplit', { fg = c.panel_bg, bg = c.panel_bg })
+  hl(0, 'VertSplit', { fg = c.bg_alt, bg = c.bg_alt })
 
   hl(0, 'Folded', { fg = c.fg_idle, bg = c.bg })
   hl(0, 'FoldColumn', { bg = c.bg })
@@ -28,31 +28,31 @@ theme.set_highlights = function(opts)
   hl(0, 'MoreMsg', { fg = c.string })
   hl(0, 'NonText', { fg = c.guide_normal })
 
-  hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 235 })
-  hl(0, 'PmenuSel', { fg = c.selection_inactive, bg = c.fg, ctermfg = 235, ctermbg = 188 })
+  hl(0, 'Pmenu', { fg = c.fg, bg = c.popup, ctermfg = 188, ctermbg = 235 })
+  hl(0, 'PmenuSel', { fg = c.popup, bg = c.fg, ctermfg = 235, ctermbg = 188 })
 
-  hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
+  hl(0, 'FloatBorder', { fg = c.fg, bg = c.popup })
   hl(0, 'Question', { fg = c.string })
   hl(0, 'Search', { fg = c.bg, bg = c.constant }) -- TODO: fix color
-  hl(0, 'SpecialKey', { fg = c.selection_inactive })
+  hl(0, 'SpecialKey', { fg = c.popup })
 
   hl(0, 'SpellCap', { fg = c.tag, undercurl = true, sp = c.error })
   hl(0, 'SpellLocal', { fg = c.keyword, undercurl = true, sp = c.keyword })
   hl(0, 'SpellBad', { fg = c.error, undercurl = true, sp = c.error })
   hl(0, 'SpellRare', { fg = c.regexp, undercurl = true, sp = c.error })
 
-  hl(0, 'StatusLine', { fg = c.fg, bg = c.panel_bg })
-  hl(0, 'StatusLineNC', { fg = c.fg_idle, bg = c.panel_bg })
+  hl(0, 'StatusLine', { fg = c.fg, bg = c.bg_alt })
+  hl(0, 'StatusLineNC', { fg = c.fg_idle, bg = c.bg_alt })
 
   hl(0, 'WildMenu', { fg = c.fg, bg = c.markup }) -- TODO: fix color
 
-  hl(0, 'TabLine', { fg = c.comment, bg = c.panel_shadow })
-  hl(0, 'TabLineFill', { fg = c.fg, bg = c.selection_inactive })
+  hl(0, 'TabLine', { fg = c.comment, bg = c.bg_alt })
+  hl(0, 'TabLineFill', { fg = c.fg, bg = c.popup })
   hl(0, 'TabLineSel', { fg = c.fg, bg = c.bg })
 
   hl(0, 'Title', { fg = c.keyword, bold = true })
 
-  hl(0, 'Visual', { bg = c.selection_inactive })
+  hl(0, 'Visual', { bg = c.popup })
 
   hl(0, 'WarningMsg', { fg = c.warning, bold = true })
 
@@ -78,7 +78,7 @@ theme.set_highlights = function(opts)
   -- quickfix window highlighting
   hl(0, 'qfLineNr', { fg = c.keyword })
   hl(0, 'Conceal', { fg = c.comment })
-  hl(0, 'CursorLineConceal', { fg = c.guide_normal, bg = c.panel_bg })
+  hl(0, 'CursorLineConceal', { fg = c.guide_normal, bg = c.bg_alt })
 
   -- diff syntax highlighting
   hl(0, 'DiffAdd', { fg = c.vcs_added, bg = c.guide_normal })
@@ -124,10 +124,10 @@ theme.set_highlights = function(opts)
   -- lsp
   hl(0, 'DiagnosticDefaultError', { fg = c.error })
   hl(0, 'DiagnosticUnderlineError', { fg = c.error, undercurl = true, sp = c.error })
-  hl(0, 'DiagnosticSignError', { fg = c.error, bg = c.panel_bg })
+  hl(0, 'DiagnosticSignError', { fg = c.error, bg = c.bg_alt })
   hl(0, 'DiagnosticWarn', { fg = c.warning })
   hl(0, 'DiagnosticUnderlineWarn', { fg = c.warning, undercurl = true, sp = c.warning })
-  hl(0, 'DiagnosticSignWarning', { fg = c.warning, bg = c.panel_bg })
+  hl(0, 'DiagnosticSignWarning', { fg = c.warning, bg = c.bg_alt })
   hl(0, 'DiagnosticVirtualTextHint', { fg = c.comment })
   hl(0, 'DiagnosticSignHint', { fg = c.comment })
   hl(0, 'DiagnosticHint', { fg = c.comment })
@@ -271,7 +271,7 @@ theme.set_highlights = function(opts)
   hl(0, 'NvimTreeSpecialFile', { fg = c.keyword, underline = true })
   hl(0, 'NvimTreeNormal', { fg = c.fg })
   hl(0, 'NvimTreeCursorLine', {})
-  hl(0, 'NvimTreeVertSplit', { bg = c.panel_shadow })
+  hl(0, 'NvimTreeVertSplit', { bg = c.bg_alt })
   hl(0, 'NvimTreeEndOfBuffer', {})
   hl(0, 'NvimTreeOpenedFolderName', {})
   hl(0, 'NvimTreeGitRenamed', { fg = c.vcs_modified })
