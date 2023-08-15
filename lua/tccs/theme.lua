@@ -71,6 +71,7 @@ theme.set_highlights = function(opts)
   hl(0, 'Ignore', {})
   hl(0, 'Error', { fg = c.fg, bg = c.error, undercurl = true, sp = c.error })
   hl(0, 'Todo', { fg = c.markup })
+  hl(0, 'Number', { fg = c.number })
 
   -- quickfix window highlighting
   hl(0, 'qfLineNr', { fg = c.accent })
@@ -202,6 +203,8 @@ theme.set_highlights = function(opts)
   hl(0, '@constant.builtin', { fg = c.constant })
   hl(0, '@string.regex', { fg = c.regexp })
   hl(0, '@function.macro', { fg = c.func })
+  hl(0, '@text.title', { fg = c.bold, bold = true })
+  hl(0, '@text.strong', { fg = c.bold, bold = true })
 
   -- fugitive
   hl(0, 'fugitiveUntrackedHeading', { fg = c.accent })
@@ -290,7 +293,6 @@ return theme
 --hl(0, 'PmenuThumb', { fg = 'NONE', bg = c.vscPopupFront })
 --hl(0, 'VisualNOS', { bg = c.vscSelection })
 --hl(0, 'Character', { fg = c.vscOrange, bg = 'NONE' })
---hl(0, 'Number', { fg = c.vscLightGreen, bg = 'NONE' })
 --hl(0, 'Boolean', { fg = c.vscBlue, bg = 'NONE' })
 --hl(0, 'Float', { fg = c.vscLightGreen, bg = 'NONE' })
 --hl(0, 'Conditional', { fg = c.vscPink, bg = 'NONE' })
@@ -350,12 +352,10 @@ return theme
 --hl(0, '@tag.delimiter', { fg = c.vscGray, bg = 'NONE' })
 --hl(0, '@tag.attribute', { fg = c.vscLightBlue, bg = 'NONE' })
 --
---hl(0, '@text.title', { fg = isDark and c.vscBlue or c.vscYellowOrange, bold = true })
 --hl(0, '@text.literal', { fg = c.fg, bg = 'NONE' })
 --hl(0, '@text.literal.markdown', { fg = c.vscOrange, bg = 'NONE' })
 --hl(0, '@text.literal.markdown_inline', { fg = c.vscOrange, bg = 'NONE' })
 --hl(0, '@text.emphasis', { fg = c.fg, bg = 'NONE', italic = true })
---hl(0, '@text.strong', { fg = isDark and c.vscBlue or c.vscViolet, bold = true })
 --hl(0, '@text.uri', { fg = c.fg, bg = 'NONE' })
 --hl(0, '@textReference', { fg = isDark and c.vscOrange or c.vscYellowOrange })
 --hl(0, '@punctuation.delimiter', { fg = c.fg, bg = 'NONE' })
