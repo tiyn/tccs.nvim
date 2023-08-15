@@ -3,43 +3,32 @@
 local config = require('tccs.config')
 local c = require('tccs.colors').get_colors()
 
-local line_c = {
-  fg_prim  = c.fg,
-  bg_prim  = c.bg,
-  bg_sec   = c.bg_alt,
-  visual   = c.operator,
-  insert   = c.comment,
-  normal   = c.entity,
-  replace  = c.vcs_removed,
-  contrast = c.string,
-}
-
 return {
   normal = {
-    a = { fg = line_c.bg_prim, bg = line_c.insert, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
-    c = { fg = line_c.fg_prim, bg = line_c.bg_prim },
+    a = { fg = c.line_bg, bg = c.line_normal, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
+    c = { fg = c.line_fg, bg = c.line_bg },
   },
   insert = {
-    a = { fg = line_c.bg_prim, bg = line_c.normal, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
+    a = { fg = c.line_bg, bg = c.line_insert, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
   },
   visual = {
-    a = { fg = line_c.bg_prim, bg = line_c.visual, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
+    a = { fg = c.line_bg, bg = c.line_visual, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
   },
   replace = {
-    a = { fg = line_c.bg_prim, bg = line_c.replace, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
+    a = { fg = c.line_bg, bg = c.line_replace, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
   },
   command = {
-    a = { fg = line_c.bg_prim, bg = line_c.contrast, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
-    c = { fg = line_c.fg_prim, bg = line_c.bg_prim },
+    a = { fg = c.line_bg, bg = c.line_contrast, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
+    c = { fg = c.line_fg, bg = c.line_bg },
   },
   inactive = {
-    a = { fg = line_c.fg_prim, bg = line_c.bg_sec, gui = 'bold' },
-    b = { fg = line_c.fg_prim, bg = line_c.bg_sec },
-    c = { fg = line_c.fg_prim, bg = line_c.bg_prim },
+    a = { fg = c.line_fg, bg = c.line_bg_alt, gui = 'bold' },
+    b = { fg = c.line_fg, bg = c.line_bg_alt },
+    c = { fg = c.line_fg, bg = c.line_bg },
   },
 }

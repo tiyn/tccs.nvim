@@ -11,7 +11,7 @@ theme.set_highlights = function(opts)
   hl(0, 'CursorColumn', { bg = c.bg_alt })
 
   hl(0, 'CursorLineNr', { fg = c.accent, bg = c.bg_alt })
-  hl(0, 'LineNr', { fg = c.guide_normal })
+  hl(0, 'LineNr', { fg = c.border })
 
   hl(0, 'Directory', { fg = c.func })
 
@@ -24,37 +24,34 @@ theme.set_highlights = function(opts)
   hl(0, 'SignColumn', { bg = c.bg })
 
   hl(0, 'MatchParen', { fg = c.fg, bg = c.bg, underline = true })
-  hl(0, 'ModeMsg', { fg = c.string })
-  hl(0, 'MoreMsg', { fg = c.string })
-  hl(0, 'NonText', { fg = c.guide_normal })
+  hl(0, 'ModeMsg', { fg = c.fg_alt })
+  hl(0, 'MoreMsg', { fg = c.fg_alt })
+  hl(0, 'NonText', { fg = c.border })
 
   hl(0, 'Pmenu', { fg = c.fg, bg = c.popup, ctermfg = 188, ctermbg = 235 })
   hl(0, 'PmenuSel', { fg = c.popup, bg = c.fg, ctermfg = 235, ctermbg = 188 })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.popup })
-  hl(0, 'Question', { fg = c.string })
-  hl(0, 'Search', { fg = c.bg, bg = c.constant }) -- TODO: fix color
+  hl(0, 'Question', { fg = c.fg_alt })
+  hl(0, 'Search', { fg = c.bg, bg = c.fg }) -- TODO: fix color
   hl(0, 'SpecialKey', { fg = c.popup })
 
-  hl(0, 'SpellCap', { fg = c.tag, undercurl = true, sp = c.error })
-  hl(0, 'SpellLocal', { fg = c.keyword, undercurl = true, sp = c.keyword })
+  hl(0, 'SpellCap', { fg = c.warning, undercurl = true, sp = c.error })
+  hl(0, 'SpellLocal', { fg = c.warning, undercurl = true, sp = c.keyword })
   hl(0, 'SpellBad', { fg = c.error, undercurl = true, sp = c.error })
-  hl(0, 'SpellRare', { fg = c.regexp, undercurl = true, sp = c.error })
+  hl(0, 'SpellRare', { fg = c.error, undercurl = true, sp = c.error })
 
   hl(0, 'StatusLine', { fg = c.fg, bg = c.bg_alt })
   hl(0, 'StatusLineNC', { fg = c.fg_idle, bg = c.bg_alt })
 
-  hl(0, 'WildMenu', { fg = c.fg, bg = c.markup }) -- TODO: fix color
+  hl(0, 'WildMenu', { fg = c.fg, bg = c.popup })
 
-  hl(0, 'TabLine', { fg = c.comment, bg = c.bg_alt })
+  hl(0, 'TabLine', { fg = c.accent_alt, bg = c.bg_alt })
   hl(0, 'TabLineFill', { fg = c.fg, bg = c.popup })
   hl(0, 'TabLineSel', { fg = c.fg, bg = c.bg })
 
-  hl(0, 'Title', { fg = c.keyword, bold = true })
-
+  hl(0, 'Title', { bold = true })
   hl(0, 'Visual', { bg = c.popup })
-
-  hl(0, 'WarningMsg', { fg = c.warning, bold = true })
 
   -- syntax
   hl(0, 'Comment', { fg = c.comment, italic = opts.italic_comments })
@@ -65,10 +62,10 @@ theme.set_highlights = function(opts)
   hl(0, 'Statement', { fg = c.keyword })
   hl(0, 'Operator', { fg = c.operator })
   hl(0, 'Exception', { fg = c.markup })
-  hl(0, 'PreProc', { fg = c.accent })
+  hl(0, 'PreProc', { fg = c.keyword })
   hl(0, 'Type', { fg = c.entity })
   hl(0, 'Structure', { fg = c.special })
-  --hl(0, 'Special', { fg = c.accent })
+  hl(0, 'Special', { fg = c.special })
   hl(0, 'Delimiter', { fg = c.special })
   hl(0, 'Underlined', { fg = c.tag, underline = true })
   hl(0, 'Ignore', {})
@@ -76,69 +73,71 @@ theme.set_highlights = function(opts)
   hl(0, 'Todo', { fg = c.markup })
 
   -- quickfix window highlighting
-  hl(0, 'qfLineNr', { fg = c.keyword })
-  hl(0, 'Conceal', { fg = c.comment })
-  hl(0, 'CursorLineConceal', { fg = c.guide_normal, bg = c.bg_alt })
+  hl(0, 'qfLineNr', { fg = c.accent })
+  hl(0, 'Conceal', { fg = c.accent_alt })
+  hl(0, 'CursorLineConceal', { fg = c.border, bg = c.bg_alt })
 
   -- diff syntax highlighting
-  hl(0, 'DiffAdd', { fg = c.vcs_added, bg = c.guide_normal })
+  hl(0, 'DiffAdd', { fg = c.added, bg = c.border })
   hl(0, 'diffAdded', { link = 'DiffAdd' })
-  hl(0, 'DiffChange', { fg = c.vcs_modified, bg = c.guide_normal })
-  hl(0, 'DiffDelete', { fg = c.vcs_removed, bg = c.guide_normal })
+  hl(0, 'DiffChange', { fg = c.modified, bg = c.border })
+  hl(0, 'DiffDelete', { fg = c.removed, bg = c.border })
   hl(0, 'diffRemoved', { link = 'DiffDelete' })
-  hl(0, 'DiffText', { fg = c.vcs_modified, bg = c.guide_active })
+  hl(0, 'DiffText', { fg = c.modified, bg = c.border_alt })
 
   -- netrw
-  hl(0, 'netrwClassify', { fg = c.special })
+  hl(0, 'netrwClassify', { fg = c.fg_alt })
 
   -- gitgutter
-  hl(0, 'GitGutterAdd', { fg = c.vcs_added, bg = c.bg })
-  hl(0, 'GitGutterChange', { fg = c.vcs_modified, bg = c.bg })
-  hl(0, 'GitGutterDelete', { fg = c.vcs_removed, bg = c.bg })
-  hl(0, 'GitGutterChangeDelete', { fg = c.vcs_modified, bg = c.bg, underline = true })
+  hl(0, 'GitGutterAdd', { fg = c.added, bg = c.bg })
+  hl(0, 'GitGutterChange', { fg = c.modified, bg = c.bg })
+  hl(0, 'GitGutterDelete', { fg = c.removed, bg = c.bg })
+  hl(0, 'GitGutterChangeDelete', { fg = c.modified, bg = c.bg, underline = true })
 
   -- signify
-  hl(0, 'SignifySignAdd', { fg = c.vcs_added, bg = c.bg })
-  hl(0, 'SignifySignChange', { fg = c.vcs_modified, bg = c.bg })
-  hl(0, 'SignifySignDelete', { fg = c.vcs_removed, bg = c.bg })
-  hl(0, 'SignifySignChangeDelete', { fg = c.vcs_modified, bg = c.bg, underline = true })
+  hl(0, 'SignifySignAdd', { fg = c.added, bg = c.bg })
+  hl(0, 'SignifySignChange', { fg = c.modified, bg = c.bg })
+  hl(0, 'SignifySignDelete', { fg = c.removed, bg = c.bg })
+  hl(0, 'SignifySignChangeDelete', { fg = c.modified, bg = c.bg, underline = true })
 
   -- nerdtree
   hl(0, 'NERDTreeOpenable', { fg = c.fg_idle })
   hl(0, 'NERDTreeCloseable', { fg = c.accent })
   hl(0, 'NERDTreeUp', { fg = c.fg_idle })
-  hl(0, 'NERDTreeDir', { fg = c.func })
+  hl(0, 'NERDTreeDir', { fg = c.fg_alt })
   hl(0, 'NERDTreeFile', {})
-  hl(0, 'NERDTreeDirSlash', { fg = c.special })
+  hl(0, 'NERDTreeDirSlash', { fg = c.fg_alt })
 
   -- telescope
   hl(0, 'TelescopeMatching', { fg = c.accent, bold = true })
-  hl(0, 'TelescopePromptBorder', { fg = c.guide_normal })
-  hl(0, 'TelescopeResultsBorder', { fg = c.guide_normal })
-  hl(0, 'TelescopePreviewBorder', { fg = c.guide_normal })
+  hl(0, 'TelescopePromptBorder', { fg = c.border })
+  hl(0, 'TelescopeResultsBorder', { fg = c.border })
+  hl(0, 'TelescopePreviewBorder', { fg = c.border })
   hl(0, 'TelescopeNormal', { fg = c.fg })
-  hl(0, 'TelescopeSelection', { fg = c.fg, bg = c.vscPopupHighlightBlue })
-  hl(0, 'TelescopeMultiSelection', { fg = c.fg, bg = c.vscPopupHighlightBlue })
+  hl(0, 'TelescopeSelection', { fg = c.bg, bg = c.fg })
+  hl(0, 'TelescopeMultiSelection', { fg = c.bg, bg = c.fg })
   hl(0, 'TelescopePromptPrefix', { fg = c.fg, bg = 'NONE' })
 
-  -- lsp
+  -- diagnostics
   hl(0, 'DiagnosticDefaultError', { fg = c.error })
   hl(0, 'DiagnosticUnderlineError', { fg = c.error, undercurl = true, sp = c.error })
   hl(0, 'DiagnosticSignError', { fg = c.error, bg = c.bg_alt })
   hl(0, 'DiagnosticWarn', { fg = c.warning })
   hl(0, 'DiagnosticUnderlineWarn', { fg = c.warning, undercurl = true, sp = c.warning })
   hl(0, 'DiagnosticSignWarning', { fg = c.warning, bg = c.bg_alt })
-  hl(0, 'DiagnosticVirtualTextHint', { fg = c.comment })
-  hl(0, 'DiagnosticSignHint', { fg = c.comment })
-  hl(0, 'DiagnosticHint', { fg = c.comment })
+  hl(0, 'DiagnosticVirtualTextHint', { fg = c.hint })
+  hl(0, 'DiagnosticSignHint', { fg = c.hint })
+  hl(0, 'DiagnosticHint', { fg = c.hint })
   hl(0, 'DiagnosticVirtualTextInfo', { fg = c.fg })
   hl(0, 'DiagnosticSignInfo', { fg = c.fg })
   hl(0, 'DiagnosticInfo', { fg = c.fg })
 
-  -- yats
+  hl(0, 'WarningMsg', { fg = c.warning, bold = true })
+
+  -- typescript
   hl(0, 'typescriptDecorator', { fg = c.markup })
-  hl(0, 'typescriptImport', { fg = c.accent })
-  hl(0, 'typescriptExport', { fg = c.accent })
+  hl(0, 'typescriptImport', { fg = c.keyword })
+  hl(0, 'typescriptExport', { fg = c.keyword })
   hl(0, 'typescriptIdentifier', { fg = c.tag, italic = opts.italic_comments })
   hl(0, 'typescriptAssign', { fg = c.operator })
   hl(0, 'typescriptBinaryOp', { fg = c.operator })
@@ -157,10 +156,10 @@ theme.set_highlights = function(opts)
   hl(0, 'typescriptOperator', { fg = c.keyword })
   hl(0, 'typescriptArrowFunc', { fg = c.operator })
   hl(0, 'typescriptBraces', { fg = c.special })
-  hl(0, 'typescriptGlobal', { fg = c.accent })
+  hl(0, 'typescriptGlobal', { fg = c.keyword })
   hl(0, 'typescriptDOMFormProp', { fg = c.entity })
   hl(0, 'typescriptDOMEventProp', { fg = c.entity })
-  hl(0, 'typescriptBOMWindowProp', { fg = c.accent })
+  hl(0, 'typescriptBOMWindowProp', { fg = c.keyword })
   hl(0, 'typescriptDateMethod', { fg = c.func })
   hl(0, 'typescriptBlobMethod', { fg = c.func })
   hl(0, 'typescriptArrayMethod', { fg = c.func })
@@ -194,7 +193,7 @@ theme.set_highlights = function(opts)
   hl(0, 'jsArrowFunction', { fg = c.operator })
 
   -- treesitter
-  hl(0, '@include', { fg = c.accent })
+  hl(0, '@include', { fg = c.keyword })
   hl(0, '@parameter', { fg = c.special })
   hl(0, '@field', { fg = c.tag })
   hl(0, '@property', { fg = c.tag })
@@ -204,7 +203,6 @@ theme.set_highlights = function(opts)
   hl(0, '@string.regex', { fg = c.regexp })
   hl(0, '@function.macro', { fg = c.func })
 
-
   -- fugitive
   hl(0, 'fugitiveUntrackedHeading', { fg = c.accent })
   hl(0, 'fugitiveUnstagedHeading', { fg = c.accent })
@@ -212,10 +210,10 @@ theme.set_highlights = function(opts)
   hl(0, 'fugitiveHeading', { fg = c.accent })
 
   -- git commit
-  hl(0, 'gitcommitBranch', { fg = c.func })
+  hl(0, 'gitcommitBranch', { fg = c.ui })
   hl(0, 'gitcommitHeader', { fg = c.accent })
   hl(0, 'gitcommitSummary', { fg = c.fg })
-  hl(0, 'gitcommitOverflow', { fg = c.markup })
+  hl(0, 'gitcommitOverflow', { fg = c.accent })
 
   -- startify
   hl(0, 'StartifyFile', { fg = c.fg })
@@ -238,14 +236,14 @@ theme.set_highlights = function(opts)
   -- pandoc
   hl(0, 'pandocPipeTableHeader', { fg = c.keyword })
   hl(0, 'pandocPipeTableDelims', { fg = c.keyword })
-  hl(0, 'pandocDelimitedCodeBlock', { fg = c.accent })
+  hl(0, 'pandocDelimitedCodeBlock', { fg = c.keyword })
 
   -- shell
   hl(0, 'shTestOpr', { fg = c.operator })
   hl(0, 'shOption', { fg = c.special })
   hl(0, 'shQuote', { fg = c.string })
 
-  -- shell
+  -- haskell
   hl(0, 'haskellDeclKeyword', { fg = c.keyword })
   hl(0, 'haskellLet', { fg = c.keyword })
   hl(0, 'haskellWhere', { fg = c.keyword })
@@ -263,24 +261,24 @@ theme.set_highlights = function(opts)
 
   -- nvimtree
   hl(0, 'NvimTreeRootFolder', { fg = c.fg, bold = true })
-  hl(0, 'NvimTreeGitDirty', { fg = c.vcs_modified })
-  hl(0, 'NvimTreeGitNew', { fg = c.vcs_added })
-  hl(0, 'NvimTreeImageFile', { fg = c.keyword })
+  hl(0, 'NvimTreeGitDirty', { fg = c.modified })
+  hl(0, 'NvimTreeGitNew', { fg = c.added })
+  hl(0, 'NvimTreeImageFile', { fg = c.accent })
   hl(0, 'NvimTreeEmptyFolderName', { fg = c.ui })
   hl(0, 'NvimTreeFolderName', { fg = c.fg })
-  hl(0, 'NvimTreeSpecialFile', { fg = c.keyword, underline = true })
+  hl(0, 'NvimTreeSpecialFile', { fg = c.accent, underline = true })
   hl(0, 'NvimTreeNormal', { fg = c.fg })
   hl(0, 'NvimTreeCursorLine', {})
   hl(0, 'NvimTreeVertSplit', { bg = c.bg_alt })
   hl(0, 'NvimTreeEndOfBuffer', {})
   hl(0, 'NvimTreeOpenedFolderName', {})
-  hl(0, 'NvimTreeGitRenamed', { fg = c.vcs_modified })
+  hl(0, 'NvimTreeGitRenamed', { fg = c.modified })
   hl(0, 'NvimTreeGitIgnored', { fg = c.ui })
-  hl(0, 'NvimTreeGitDeleted', { fg = c.vcs_removed })
-  hl(0, 'NvimTreeGitStaged', { fg = c.vcs_added })
-  hl(0, 'NvimTreeGitMerge', { fg = c.error })
-  hl(0, 'NvimTreeGitDirty', { fg = c.vcs_modified })
-  hl(0, 'NvimTreeGitNew', { fg = c.vcs_added })
+  hl(0, 'NvimTreeGitDeleted', { fg = c.removed })
+  hl(0, 'NvimTreeGitStaged', { fg = c.added })
+  hl(0, 'NvimTreeGitMerge', { fg = c.modified })
+  hl(0, 'NvimTreeGitDirty', { fg = c.modified })
+  hl(0, 'NvimTreeGitNew', { fg = c.added })
 end
 
 return theme
