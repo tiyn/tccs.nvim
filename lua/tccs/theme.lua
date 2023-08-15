@@ -33,7 +33,7 @@ theme.set_highlights = function(opts)
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.popup })
   hl(0, 'Question', { fg = c.fg_alt })
-  hl(0, 'Search', { fg = c.bg, bg = c.fg }) -- TODO: fix color
+  hl(0, 'Search', { fg = c.bg, bg = c.fg })
   hl(0, 'SpecialKey', { fg = c.popup })
 
   hl(0, 'SpellCap', { fg = c.warning, undercurl = true, sp = c.error })
