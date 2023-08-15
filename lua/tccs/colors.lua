@@ -15,6 +15,7 @@ colors.get_colors = function()
     popup         = "#272727",
     border        = "#242A35",
     border_alt    = "#393F4D",
+    fg_idle       = "#FFD602",
     -- syntax
     tag           = "#9CDCFE",
     func          = "#DCDCAA",
@@ -29,12 +30,13 @@ colors.get_colors = function()
     bold          = "#569CD6",
     operator      = "#C586C0",
     number        = "#B5CEA8",
-    -- extended color palette
-    fg_idle       = "#FFD602",
     -- git
-    added         = "#6A9955",
-    modified      = "#4FC1FE",
-    removed       = "#D16969",
+    added_fg      = "#6A9955",
+    added_bg      = "#0E1F17",
+    modified_fg   = "#18A2FE",
+    modified_bg   = "#223255",
+    removed_fg    = "#D16969",
+    removed_bg    = "#190E11",
     -- lsp
     error         = "#FB0101",
     warning       = "#FFD602",

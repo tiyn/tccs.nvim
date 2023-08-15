@@ -79,27 +79,27 @@ theme.set_highlights = function(opts)
   hl(0, 'CursorLineConceal', { fg = c.border, bg = c.bg_alt })
 
   -- diff syntax highlighting
-  hl(0, 'DiffAdd', { fg = c.added, bg = c.border })
+  hl(0, 'DiffAdd', { bg = c.added_bg })
   hl(0, 'diffAdded', { link = 'DiffAdd' })
-  hl(0, 'DiffChange', { fg = c.modified, bg = c.border })
-  hl(0, 'DiffDelete', { fg = c.removed, bg = c.border })
+  hl(0, 'DiffChange', { bg = c.modified_bg })
+  hl(0, 'DiffDelete', { bg = c.removed_bg })
   hl(0, 'diffRemoved', { link = 'DiffDelete' })
-  hl(0, 'DiffText', { fg = c.modified, bg = c.border_alt })
+  hl(0, 'DiffText', { bg = c.modified_fg })
 
   -- netrw
   hl(0, 'netrwClassify', { fg = c.fg_alt })
 
   -- gitgutter
-  hl(0, 'GitGutterAdd', { fg = c.added, bg = c.bg })
-  hl(0, 'GitGutterChange', { fg = c.modified, bg = c.bg })
-  hl(0, 'GitGutterDelete', { fg = c.removed, bg = c.bg })
-  hl(0, 'GitGutterChangeDelete', { fg = c.modified, bg = c.bg, underline = true })
+  hl(0, 'GitGutterAdd', { fg = c.added_fg, bg = c.bg })
+  hl(0, 'GitGutterChange', { fg = c.modified_fg, bg = c.bg })
+  hl(0, 'GitGutterDelete', { fg = c.removed_fg, bg = c.bg })
+  hl(0, 'GitGutterChangeDelete', { fg = c.modified_fg, bg = c.bg, underline = true })
 
   -- signify
-  hl(0, 'SignifySignAdd', { fg = c.added, bg = c.bg })
-  hl(0, 'SignifySignChange', { fg = c.modified, bg = c.bg })
-  hl(0, 'SignifySignDelete', { fg = c.removed, bg = c.bg })
-  hl(0, 'SignifySignChangeDelete', { fg = c.modified, bg = c.bg, underline = true })
+  hl(0, 'SignifySignAdd', { fg = c.added_fg, bg = c.bg })
+  hl(0, 'SignifySignChange', { fg = c.modified_fg, bg = c.bg })
+  hl(0, 'SignifySignDelete', { fg = c.removed_fg, bg = c.bg })
+  hl(0, 'SignifySignChangeDelete', { fg = c.modified_fg, bg = c.bg, underline = true })
 
   -- nerdtree
   hl(0, 'NERDTreeOpenable', { fg = c.fg_idle })
@@ -264,8 +264,8 @@ theme.set_highlights = function(opts)
 
   -- nvimtree
   hl(0, 'NvimTreeRootFolder', { fg = c.fg, bold = true })
-  hl(0, 'NvimTreeGitDirty', { fg = c.modified })
-  hl(0, 'NvimTreeGitNew', { fg = c.added })
+  hl(0, 'NvimTreeGitDirty', { fg = c.modified_fg })
+  hl(0, 'NvimTreeGitNew', { fg = c.added_fg })
   hl(0, 'NvimTreeImageFile', { fg = c.accent })
   hl(0, 'NvimTreeEmptyFolderName', { fg = c.ui })
   hl(0, 'NvimTreeFolderName', { fg = c.fg })
@@ -275,13 +275,13 @@ theme.set_highlights = function(opts)
   hl(0, 'NvimTreeVertSplit', { bg = c.bg_alt })
   hl(0, 'NvimTreeEndOfBuffer', {})
   hl(0, 'NvimTreeOpenedFolderName', {})
-  hl(0, 'NvimTreeGitRenamed', { fg = c.modified })
+  hl(0, 'NvimTreeGitRenamed', { fg = c.modified_fg })
   hl(0, 'NvimTreeGitIgnored', { fg = c.ui })
-  hl(0, 'NvimTreeGitDeleted', { fg = c.removed })
-  hl(0, 'NvimTreeGitStaged', { fg = c.added })
-  hl(0, 'NvimTreeGitMerge', { fg = c.modified })
-  hl(0, 'NvimTreeGitDirty', { fg = c.modified })
-  hl(0, 'NvimTreeGitNew', { fg = c.added })
+  hl(0, 'NvimTreeGitDeleted', { fg = c.removed_fg })
+  hl(0, 'NvimTreeGitStaged', { fg = c.added_fg })
+  hl(0, 'NvimTreeGitMerge', { fg = c.modified_fg })
+  hl(0, 'NvimTreeGitDirty', { fg = c.modified_fg })
+  hl(0, 'NvimTreeGitNew', { fg = c.added_fg })
 end
 
 return theme
