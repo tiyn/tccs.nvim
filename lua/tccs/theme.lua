@@ -29,7 +29,7 @@ theme.set_highlights = function(opts)
   hl(0, 'NonText', { fg = c.guide_normal })
 
   hl(0, 'Pmenu', { fg = c.fg, bg = c.selection_inactive, ctermfg = 188, ctermbg = 235 })
-  hl(0, 'PmenuSel', { fg = c.selection_bg, bg = c.fg, ctermfg = 235, ctermbg = 188 })
+  hl(0, 'PmenuSel', { fg = c.selection_inactive, bg = c.fg, ctermfg = 235, ctermbg = 188 })
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'Question', { fg = c.string })
@@ -47,7 +47,7 @@ theme.set_highlights = function(opts)
   hl(0, 'WildMenu', { fg = c.fg, bg = c.markup }) -- TODO: fix color
 
   hl(0, 'TabLine', { fg = c.comment, bg = c.panel_shadow })
-  hl(0, 'TabLineFill', { fg = c.fg, bg = c.panel_border })
+  hl(0, 'TabLineFill', { fg = c.fg, bg = c.selection_inactive })
   hl(0, 'TabLineSel', { fg = c.fg, bg = c.bg })
 
   hl(0, 'Title', { fg = c.keyword, bold = true })
