@@ -32,7 +32,7 @@ Add the following line into the function `return require("lazy").setup({})` to l
   'tiyn/tccs.nvim',
   config = function()
     require('tccs').setup()
-    require('tccs').load()
+    vim.cmd('colorscheme tccs')
   end
 },
 ```
