@@ -84,7 +84,7 @@ theme.set_highlights = function(opts)
   hl(0, 'DiffChange', { bg = c.modified_bg })
   hl(0, 'DiffDelete', { bg = c.removed_bg })
   hl(0, 'diffRemoved', { link = 'DiffDelete' })
-  hl(0, 'DiffText', { bg = c.modified_fg })
+  hl(0, 'DiffText', { bg = c.modified_fg_alt })
 
   -- netrw
   hl(0, 'netrwClassify', { fg = c.fg_alt })
