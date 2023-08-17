@@ -6,7 +6,7 @@ theme.set_highlights = function(opts)
 
   hl(0, 'Normal', { fg = c.fg, bg = c.bg })
   hl(0, 'ColorColumn', { bg = c.color_column })
-  hl(0, 'Cursor', { fg = c.tag })
+  hl(0, 'Cursor', { fg = c.cursor })
   hl(0, 'CursorLine', { bg = c.bg_alt })
   hl(0, 'CursorColumn', { bg = c.bg_alt })
 
@@ -33,7 +33,7 @@ theme.set_highlights = function(opts)
 
   hl(0, 'FloatBorder', { fg = c.fg, bg = c.popup })
   hl(0, 'Question', { fg = c.fg_alt })
-  hl(0, 'Search', { fg = c.bg, bg = c.fg })
+  hl(0, 'Search', { fg = c.bg, bg = c.fg_alt })
   hl(0, 'SpecialKey', { fg = c.popup })
 
   hl(0, 'SpellCap', { fg = c.warning, undercurl = true, sp = c.error })

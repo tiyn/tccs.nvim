@@ -8,6 +8,7 @@ colors.get_colors = function()
     bg_alt        = "#0D1016",
     fg            = "#D4D4D4",
     fg_alt        = "#CE9178",
+    cursor        = "#AEAFAD",
     accent        = "#C586C0",
     accent_alt    = "#608B4E",
     ui            = "#4D5566",
