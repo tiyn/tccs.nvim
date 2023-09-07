@@ -1,6 +1,6 @@
 # Vim TCCS
 
-![colorscheme-example](tccs-example.jpg)
+![colorscheme-example](tccs-example.png)
 
 Tiyns custom color scheme (TCCS) for vim is an adaption of
 [Mofiquls vscode.nvim](https://github.com/Mofiqul/vscode.nvim) which is based upon colors from
