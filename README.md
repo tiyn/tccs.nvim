@@ -22,7 +22,18 @@ It is recommended to take a look into it to get similar highlighting, etc.
 Following Plugins are especially supported by this color scheme.
 Other plugins may work as well, but don't are explicitly configured.
 
+- [Diffview](https://github.com/sindrets/diffview.nvim)
+- [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
+- [LSP-Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [NavBuddy](https://github.com/SmiteshP/nvim-navbuddy)
+- [NVIM CMP](https://github.com/hrsh7th/nvim-cmp)
+- [NVIM Scrollbar](https://github.com/petertriho/nvim-scrollbar)
+- [NVIM Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [NVIM Tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [NVIM Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [NVIM Ufo](https://github.com/kevinhwang91/nvim-ufo)
+- [Wilder](https://github.com/gelguy/wilder.nvim)
 
 ## Setup
 
