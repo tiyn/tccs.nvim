@@ -13,6 +13,10 @@ This color scheme uses colors that match the ones of VSCode with strong red and
 yellow colors for errors and warnings.
 Additionally a darker background was added for better contrast.
 
+The example picture is taken with all settings available from my
+[dotfiles](https://github.com/tiyn/dotfiles).
+It is recommended to take a look into it to get similar highlighting, etc.
+
 ## Supported Plugins
 
 Following Plugins are especially supported by this color scheme.
