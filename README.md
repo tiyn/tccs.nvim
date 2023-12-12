@@ -22,6 +22,7 @@ It is recommended to take a look into it to get similar highlighting, etc.
 Following Plugins are especially supported by this color scheme.
 Other plugins may work as well, but don't are explicitly configured.
 
+- [barbecue.nvim](https://github.com/utilyre/barbecue.nvim)
 - [Diffview](https://github.com/sindrets/diffview.nvim)
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
 - [LSP-Signature](https://github.com/ray-x/lsp_signature.nvim)
