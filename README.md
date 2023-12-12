@@ -28,6 +28,7 @@ Other plugins may work as well, but don't are explicitly configured.
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [NavBuddy](https://github.com/SmiteshP/nvim-navbuddy)
 - [NVIM CMP](https://github.com/hrsh7th/nvim-cmp)
+- [NVIM Cursorword](https://github.com/xiyaowong/nvim-cursorword)
 - [NVIM Scrollbar](https://github.com/petertriho/nvim-scrollbar)
 - [NVIM Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [NVIM Tree](https://github.com/nvim-tree/nvim-tree.lua)
