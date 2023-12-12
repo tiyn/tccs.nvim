@@ -284,7 +284,7 @@ theme.set_highlights = function(opts)
   hl(0, 'NvimTreeGitNew', { fg = c.added_fg })
 
   -- nvim-cursorword
-  hl(0, 'CursorWord', { fg = c.tag, underline = true })
+  hl(0, 'CursorWord', { underline = true })
 
 end
 
