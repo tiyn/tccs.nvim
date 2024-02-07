@@ -297,11 +297,11 @@ theme.set_highlights = function(opts)
   hl(0, '@markup.raw.markdown', { fg = c.string })
   hl(0, '@markup.raw.markdown_inline', { fg = c.string })
   hl(0, '@markup.link.label', { fg = c.tag })
-  hl(0, '@markup.link.url', { fg = c.fg })
+  hl(0, '@markup.link.url', { fg = c.string })
   hl(0, '@markup.list.checked', { link = 'Todo' })
   hl(0, '@markup.list.unchecked', { link = 'Todo' })
-  hl(0, '@textReference', { fg = c.fg })
-  hl(0, '@stringEscape', { fg = c.fg, bold = true })
+  hl(0, '@textReference', { fg = c.tag })
+  hl(0, '@stringEscape', { fg = c.string, bold = true })
 
 end
 
