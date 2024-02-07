@@ -286,13 +286,13 @@ theme.set_highlights = function(opts)
   -- nvim-cursorword
   hl(0, 'CursorWord', { underline = true })
 
-  -- markdown
+  -- markup
   hl(0, '@text', { fg = c.fg }) -- Legacy
-  hl(0, '@markup.strong', { fg = c.bold, bold = true })
+  hl(0, '@markup.strong', { fg = c.fg, bold = true })
   hl(0, '@markup.italic', { fg = c.fg, italic = true })
   hl(0, '@markup.underline', { fg = c.fg, bg = 'NONE' })
   hl(0, '@markup.strikethrough', { fg = c.fg, strikethrough = true })
-  hl(0, '@markup.heading', { fg = c.accent, bold = true })
+  hl(0, '@markup.heading', { fg = c.bold, bold = true })
   hl(0, '@markup.raw', { fg = c.fg })
   hl(0, '@markup.raw.markdown', { fg = c.string })
   hl(0, '@markup.raw.markdown_inline', { fg = c.string })
