@@ -286,6 +286,9 @@ theme.set_highlights = function(opts)
   -- nvim-cursorword
   hl(0, 'CursorWord', { underline = true })
 
+  -- markdown
+  hl(0, '@markup.heading', { fg = c.modified_fg, bold = true })
+
 end
 
 return theme
