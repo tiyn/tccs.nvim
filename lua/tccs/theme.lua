@@ -305,9 +305,9 @@ theme.set_highlights = function(opts)
 
   -- modes.nvim
   hl(0, "ModesCopy", { bg = c.fg, fg = c.bg })
-  hl(0, "ModesDelete", { bg = c.removed_bg })
-  hl(0, "ModesInsert", { bg = c.added_bg })
-  hl(0, "ModesVisual", { bg = c.visual_bg })
+  hl(0, "ModesDelete", { bg = c.removed_fg })
+  hl(0, "ModesInsert", { bg = c.added_fg })
+  hl(0, "ModesVisual", { bg = c.visual_fg })
 end
 
 return theme

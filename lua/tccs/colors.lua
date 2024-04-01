@@ -40,7 +40,7 @@ colors.get_colors = function()
     removed_fg      = "#D16969",
     removed_bg      = "#190E11",
     -- bonus
-    visual_bg       = "#955690",
+    visual_fg       = "#C586C0",
     -- lsp
     error           = "#FB0101",
     warning         = "#FFD602",
