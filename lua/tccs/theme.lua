@@ -304,10 +304,10 @@ theme.set_highlights = function(opts)
   hl(0, "@stringEscape", { fg = c.string, bold = true })
 
   -- modes.nvim
-  hl(0, "ModesCopy", { bg = c.line_fg })
-  hl(0, "ModesDelete", { bg = c.line_replace })
-  hl(0, "ModesInsert", { bg = c.line_insert })
-  hl(0, "ModesVisual", { bg = c.line_visual })
+  hl(0, "ModesCopy", { bg = c.fg, fg = c.bg })
+  hl(0, "ModesDelete", { bg = c.removed_bg })
+  hl(0, "ModesInsert", { bg = c.added_bg })
+  hl(0, "ModesVisual", { bg = c.visual_bg })
 end
 
 return theme
