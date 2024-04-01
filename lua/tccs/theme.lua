@@ -311,6 +311,7 @@ theme.set_highlights = function(opts)
 
   -- highlighting on yank
   hl(0, "YankHighlight", { bg = c.yank_fg })
+  hl(0, "TextYankPost", { bg = c.yank_fg })
 
 end
 
