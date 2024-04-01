@@ -48,8 +48,8 @@ colors.get_colors = function()
     line_bg         = "#272727",
     line_bg_alt     = "#0D1016",
     line_visual     = "#C586C0",
-    line_normal     = "#6A9955",
-    line_insert     = "#569CD6",
+    line_normal     = "#569CD6",
+    line_insert     = "#6A9955",
     line_replace    = "#D16969",
     line_contrast   = "#CE9178",
   }
