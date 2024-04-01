@@ -41,6 +41,7 @@ colors.get_colors = function()
     removed_bg      = "#190E11",
     -- bonus
     visual_fg       = "#C586C0",
+    yank_fg         = "#F5C359",
     -- lsp
     error           = "#FB0101",
     warning         = "#FFD602",

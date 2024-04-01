@@ -304,10 +304,14 @@ theme.set_highlights = function(opts)
   hl(0, "@stringEscape", { fg = c.string, bold = true })
 
   -- modes.nvim
-  hl(0, "ModesCopy", { bg = c.fg, fg = c.bg })
+  hl(0, "ModesCopy", { bg = c.yank_fg })
   hl(0, "ModesDelete", { bg = c.removed_fg })
   hl(0, "ModesInsert", { bg = c.added_fg })
   hl(0, "ModesVisual", { bg = c.visual_fg })
+
+  -- highlighting on yank
+  hl(0, "YankHighlight", { bg = c.yank_fg })
+
 end
 
 return theme
