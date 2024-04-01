@@ -27,6 +27,7 @@ Other plugins may work as well, but don't are explicitly configured.
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
 - [LSP-Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Modes.nvim](https://github.com/mvllow/modes.nvim)
 - [NavBuddy](https://github.com/SmiteshP/nvim-navbuddy)
 - [NVIM CMP](https://github.com/hrsh7th/nvim-cmp)
 - [NVIM Cursorword](https://github.com/xiyaowong/nvim-cursorword)
