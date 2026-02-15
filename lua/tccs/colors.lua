@@ -43,8 +43,8 @@ colors.get_colors = function()
     visual_fg       = "#C586C0",
     yank_fg         = "#F5C359",
     -- lsp
-    error           = "#FB0101",
-    warning         = "#FFD602",
+    error           = "#FF0000",
+    warning         = "#FFFF00",
     hint            = "#608B4E",
     -- line
     line_fg         = "#D4D4D4",
