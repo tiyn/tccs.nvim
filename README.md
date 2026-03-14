@@ -37,6 +37,7 @@ Other plugins may work as well, but don't are explicitly configured.
 - [NVIM Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [NVIM Ufo](https://github.com/kevinhwang91/nvim-ufo)
 - [VIM Illuminate](https://github.com/RRethy/vim-illuminate)
+- [Todo Comments](https://github.com/folke/todo-comments.nvim)
 - [Wilder](https://github.com/gelguy/wilder.nvim)
 
 ## Setup

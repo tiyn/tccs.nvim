@@ -120,6 +120,7 @@ theme.set_highlights = function(opts)
   hl(0, "TelescopePromptPrefix", { fg = c.fg, bg = "NONE" })
 
   -- diagnostics
+  hl(0, "DiagnosticError", { fg = c.error })
   hl(0, "DiagnosticDefaultError", { fg = c.error })
   hl(0, "DiagnosticUnderlineError", { fg = c.error, undercurl = true, sp = c.error })
   hl(0, "DiagnosticSignError", { fg = c.error, bg = c.bg_alt })
