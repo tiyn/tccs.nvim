@@ -314,6 +314,15 @@ theme.set_highlights = function(opts)
   hl(0, "YankHighlight", { bg = c.yank_fg })
   hl(0, "TextYankPost", { bg = c.yank_fg })
 
+  -- resolve.nvim
+  hl(0, "ResolveOursMarker", { bg = c.added_fg, bold = true })
+  hl(0, "ResolveTheirsMarker", { bg = c.modified_fg, bold = true })
+  hl(0, "ResolveSeparatorMarker", { bg = c.border, bold = true })
+  hl(0, "ResolveAncestorMarker", { bg = c.removed_fg, bold = true })
+  hl(0, "ResolveOursSection", { bg = c.added_bg })
+  hl(0, "ResolveTheirsSection", { bg = c.modified_bg })
+  hl(0, "ResolveAncestorSection", { bg = c.removed_bg })
+
 end
 
 return theme
