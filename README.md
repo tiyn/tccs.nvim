@@ -1,8 +1,8 @@
-# Vim TCCS
+# tccs.nvim
 
 ![colorscheme-example](tccs-example.png)
 
-Tiyns custom color scheme (TCCS) for vim is an adaption of
+tiyns custom color scheme (tccs) for NeoVIM is an adaption of
 [Mofiquls vscode.nvim](https://github.com/Mofiqul/vscode.nvim) which is based upon colors from
 [tomasisers vim-code-dark](https://github.com/tomasiser/vim-code-dark).
 The colors were changed and differ from the original quite a bit.
@@ -25,6 +25,7 @@ Other plugins may work as well, but don't are explicitly configured.
 - [Aerial.NVIM](https://github.com/stevearc/aerial.nvim/)
 - [Diffview](https://github.com/sindrets/diffview.nvim)
 - [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
+- [file-renamer.nvim](https://github.com/tiyn/file-renamer.nvim)
 - [LSP-Signature](https://github.com/ray-x/lsp_signature.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Modes.nvim](https://github.com/mvllow/modes.nvim)
