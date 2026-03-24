@@ -323,6 +323,11 @@ theme.set_highlights = function(opts)
   hl(0, "ResolveTheirsSection", { bg = c.modified_bg })
   hl(0, "ResolveAncestorSection", { bg = c.removed_bg })
 
+  -- file-renamer.nvim
+  hl(0, "RenameComment", { fg = c.comment, italic = opts.italic_comments })
+  hl(0, "RenameDirectory", { fg = c.constant })
+  hl(0, "RenameFile", { fg = c.func })
+
 end
 
 return theme
